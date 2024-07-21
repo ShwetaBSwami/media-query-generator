@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Generate Media Queries for mobile and tablet",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShwetaBSwami/media-query-generator"
+  },
   "bin": {
     "media-query-generator": "./cli.js"
   },
