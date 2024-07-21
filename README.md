@@ -14,3 +14,20 @@ To install the package, use npm:
 
 ```sh
 npm install media-query-generator
+
+## Usage
+
+You can use the CLI to specify the input CSS file and the output file where the media queries should be generated.
+
+### Command Line Interface
+
+To run the CLI, use the following command:
+
+```sh
+media-query-generator <input.css> <output.css>
+
+
+## License
+
+MIT License
+
