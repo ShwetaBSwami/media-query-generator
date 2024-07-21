@@ -1,0 +1,14 @@
+{
+  "name": "media-query-generator",
+  "version": "1.0.0",
+  "description": "Generate Media Queries for mobile and tablet",
+  "main": "index.js",
+  "bin": {
+    "media-query-generator": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shweta Swami",
+  "license": "MIT"
+}
