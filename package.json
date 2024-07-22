@@ -1,6 +1,6 @@
 {
   "name": "media-query-generator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Generate Media Queries for mobile and tablet",
   "main": "index.js",
   "repository": {
