@@ -1,12 +1,19 @@
 {
   "name": "media-query-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate Media Queries for mobile and tablet",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShwetaBSwami/media-query-generator"
   },
+  "keywords": [
+    "media",
+    "query",
+    "generator",
+    "javascript",
+    "css"
+  ],
   "bin": {
     "media-query-generator": "./cli.js"
   },
