@@ -43,6 +43,15 @@ function generateMediaQueries(classes) {
             return `${prop}: calc(${value} * ${multiplier.spacing})`;
           case "line-height":
             return `${prop}: calc(${value} * ${multiplier.lineHeight})`;
+          case "display":
+            if (value.includes("flex")) {
+              let result = `${prop}: ${value};`;
+              if (prop === "flex-direction") {
+                result += ` flex-direction: ${multiplier.flexDirection};`;
+              }
+              return result;
+            }
+            return `${prop}: ${value}`;
           default:
             return `${prop}: ${value}`;
         }
@@ -51,12 +60,48 @@ function generateMediaQueries(classes) {
   };
 
   const multipliers = {
-    xs: { fontSize: 1, dimension: 1, spacing: 0.9, lineHeight: 0.85 },
-    sm: { fontSize: 1, dimension: 1.2, spacing: 1, lineHeight: 0.85 },
-    md: { fontSize: 1.1, dimension: 1.4, spacing: 1.1, lineHeight: 0.92 },
-    lg: { fontSize: 1.2, dimension: 1.6, spacing: 1.2, lineHeight: 0.87 },
-    xl: { fontSize: 1.3, dimension: 1.8, spacing: 1.3, lineHeight: 0.9 },
-    xxl: { fontSize: 1.4, dimension: 2, spacing: 1.4, lineHeight: 0.95 },
+    xs: {
+      fontSize: 1,
+      dimension: 1,
+      spacing: 0.9,
+      lineHeight: 0.85,
+      flexDirection: "column",
+    },
+    sm: {
+      fontSize: 1,
+      dimension: 1.2,
+      spacing: 1,
+      lineHeight: 0.85,
+      flexDirection: "row",
+    },
+    md: {
+      fontSize: 1.1,
+      dimension: 1.4,
+      spacing: 1.1,
+      lineHeight: 0.92,
+      flexDirection: "row",
+    },
+    lg: {
+      fontSize: 1.2,
+      dimension: 1.6,
+      spacing: 1.2,
+      lineHeight: 0.87,
+      flexDirection: "row",
+    },
+    xl: {
+      fontSize: 1.3,
+      dimension: 1.8,
+      spacing: 1.3,
+      lineHeight: 0.9,
+      flexDirection: "row",
+    },
+    xxl: {
+      fontSize: 1.4,
+      dimension: 2,
+      spacing: 1.4,
+      lineHeight: 0.95,
+      flexDirection: "row",
+    },
   };
 
   nonMediaRules.forEach((rule) => {
